@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class snowballs {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int snowballs = Integer.parseInt(input.nextLine());
+        double currentValue = 0;
+        double maxValue = 0;
+        int maxSnow = 0;
+        int maxTime = 0;
+        int maxQuality = 0;
+        for (int i = 0; i < snowballs; i++) {
+            int snowballSnow = Integer.parseInt(input.nextLine());
+            int snowballTime = Integer.parseInt(input.nextLine());
+            int snowballQuality = Integer.parseInt(input.nextLine());
+            currentValue = Math.pow((snowballSnow / snowballTime), snowballQuality);
+            if (currentValue > maxValue){
+                maxValue = currentValue;
+                maxSnow = snowballSnow;
+                maxTime = snowballTime;
+                maxQuality = snowballQuality;
+            }
+        }
+        System.out.printf("%d : %d = %.0f (%d)",maxSnow, maxTime, maxValue, maxQuality);
+    }
+}
