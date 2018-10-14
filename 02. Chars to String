@@ -1,0 +1,12 @@
+import java.util.Scanner;
+
+public class charsToString {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        char first = input.next().charAt(0);
+        char second = input.next().charAt(0);
+        char third = input.next().charAt(0);
+        String concat = "" + first + second + third;
+        System.out.println(concat);
+    }
+}
