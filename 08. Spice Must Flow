@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class spiceMustFlow {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int startingYield = Integer.parseInt(input.nextLine());
+        int days = ((startingYield - 100)/10) + 1;
+        int extractedYield = 0;
+        for (int i = 1; i <= days; i++) {
+            extractedYield += startingYield;
+            startingYield -= 10;
+            if (extractedYield >= 26){
+                extractedYield -= 26;
+            }
+        }
+        extractedYield -= 26;
+        if (days <= 0){
+            System.out.println(0);
+            System.out.println(0);
+        }else{
+            System.out.println(days);
+            System.out.println(extractedYield);
+        }
+
+    }
+}
